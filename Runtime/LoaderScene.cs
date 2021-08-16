@@ -47,12 +47,16 @@ namespace Test.Menu
 
         [SerializeField]
         SceneNavigation m_Navigation;
+
+        [SerializeField]
+        Text m_MenuName;
 #pragma warning restore 649
 
         GameObject m_Selected;
 
         void Start()
         {
+            m_MenuName.text = Application.productName;
             m_Navigation.Loader = this;
 
             GameObject firstEntry = null;
